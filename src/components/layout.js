@@ -11,7 +11,7 @@ import Archive from './archive';
 import './layout.css'
 
 const MainLayout = styled.main`
-  max-width: 90%;
+  max-width: 70%;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 3fr 1fr;
@@ -53,8 +53,8 @@ const Layout = ({ children, location }) => (
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
         <Spring
-          from={{height: location.pathname === '/' ? 100 : 200}}
-          to={{height: location.pathname === '/' ? 200 : 100}}
+          from={{height: location.pathname === '/' ? 100 : 400}}
+          to={{height: location.pathname === '/' ? 400 : 100}}
         >
           {styles => (
             <div style={{overflow: 'hidden', ...styles}}>

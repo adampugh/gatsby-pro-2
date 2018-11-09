@@ -1,9 +1,11 @@
 module.exports = {
   siteMetadata: {
     title: 'Gatsby Level Up Blog',
-    description: 'A new blog'
+    description: 'A new blog',
+    siteUrl: 'https://stupefied-sammet-41b412.netlify.com' 
   },
   plugins: [
+    'gatsby-plugin-sitemap',
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-source-filesystem`,
@@ -18,13 +20,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
+        name: 'Level Up Blog',
+        short_name: 'blog',
         start_url: '/',
         background_color: '#663399',
         theme_color: '#663399',
         display: 'minimal-ui',
-        icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
+        icon: 'src/images/logo.svg', // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
@@ -39,6 +41,7 @@ module.exports = {
     },
     'gatsby-transformer-remark',
     'gatsby-plugin-styled-components',
+    'gatsby-plugin-netlify-cms',
     'gatsby-plugin-netlify'
   ],
 }
